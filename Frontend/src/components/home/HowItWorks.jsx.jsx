@@ -10,7 +10,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background relative">
+    <section className="py-24 lg:py-32 bg-background">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
@@ -28,12 +28,8 @@ const HowItWorks = () => {
           </h2>
         </motion.div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-
-          {/* Line */}
-          <div className="hidden md:block absolute top-8 left-[20%] right-[20%] h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-
+        {/* Steps with vertical divider */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-border">
           {steps.map((s, i) => {
             const Icon = s.icon;
 
@@ -44,7 +40,7 @@ const HowItWorks = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="text-center"
+                className="text-center px-6"
               >
                 <motion.div
                   whileHover={{ scale: 1.1 }}

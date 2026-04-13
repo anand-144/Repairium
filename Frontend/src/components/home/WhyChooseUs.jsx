@@ -27,8 +27,8 @@ const WhyChooseUs = () => {
           </h2>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Cards with vertical divider */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-border">
           {reasons.map((r, i) => {
             const Icon = r.icon;
 
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
               <motion.div
                 key={r.title}
                 whileHover={{ scale: 1.05 }}
-                className="text-center group"
+                className="text-center group px-6"
               >
                 <motion.div
                   whileHover={{ rotate: 5 }}

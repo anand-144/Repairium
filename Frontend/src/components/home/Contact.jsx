@@ -48,9 +48,12 @@ const Contact = () => {
           </div>
 
           {/* CTA Button */}
-          <a
+             <a
             href="mailto:support@repairium.com"
-            className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-xl font-semibold hover:shadow-glow transition-all duration-300"
+            className="group inline-flex items-center justify-center gap-2 
+                       bg-gradient-to-r from-white/80 to-slate-400 
+                       text-black px-8 py-4 rounded-xl font-semibold 
+                       hover:scale-105 hover:shadow-lg transition-all duration-300"
           >
             Get Support
             <ArrowRight

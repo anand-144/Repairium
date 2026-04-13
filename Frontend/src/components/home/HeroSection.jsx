@@ -44,20 +44,20 @@ const HeroSection = () => {
           transition={{ delay: 0.2 }}
           className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-8"
         >
-          <Sparkles size={14} className="text-accent" />
-          <span className="text-sm font-medium text-muted-foreground">
+          <Sparkles size={20} className="text-accent" />
+          <span className="text-md font-medium text-muted-foreground">
             Trusted by 10,000+ happy customers
           </span>
 
-          <div className="flex -space-x-1">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                size={12}
-                className="text-accent fill-accent"
-              />
-            ))}
-          </div>
+            <div className="flex gap-0.2">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  size={20}
+                  className="text-accent fill-amber-400 "
+                />
+              ))}
+            </div>
         </motion.div>
 
         {/* Heading */}
@@ -90,25 +90,28 @@ const HeroSection = () => {
           transition={{ delay: 0.65 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
+          {/* Gradient Button (Your Style - Fixed) */}
           <button
             onClick={() => navigate("/services")}
-            className="group bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
+            className="group inline-flex items-center justify-center gap-2 
+               bg-gradient-to-r from-white/80 to-slate-400 
+               text-black px-8 py-4 rounded-xl font-semibold 
+               hover:scale-105 hover:shadow-lg transition-all duration-300"
           >
-            Book a Service
-            <ArrowRight
-              size={18}
-              className="group-hover:translate-x-1 transition-transform"
-            />
+            View All Services
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
 
+          {/* Secondary Button */}
           <button
             onClick={() => navigate("/contact")}
-            className="glass px-8 py-4 rounded-xl font-semibold text-foreground hover:bg-secondary transition-all duration-300"
+            className="inline-flex items-center justify-center 
+               glass px-8 py-4 rounded-xl font-semibold 
+               text-foreground hover:bg-secondary transition-all duration-300"
           >
             Contact Us
           </button>
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

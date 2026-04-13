@@ -17,13 +17,19 @@ const About = () => {
           {/* Icon */}
           <motion.div
             whileHover={{ scale: 1.1, rotate: 10 }}
-            className="w-14 h-14 rounded-2xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-6"
+            className="w-20 h-20 rounded-2xl 
+             bg-gradient-to-br from-yellow-300 via-amber-200 to-amber-500 
+             flex items-center justify-center mx-auto mb-6 
+             shadow-lg shadow-[0_0_20px_rgba(255,215,0,0.4)]"
           >
-            <Heart size={24} />
+            <Heart
+              size={30}
+              className="text-white fill-red-500 stroke-[1.5]"
+            />
           </motion.div>
 
           {/* Heading */}
-          <span className="text-primary font-semibold text-xs uppercase tracking-[0.2em]">
+          <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">
             About
           </span>
 
